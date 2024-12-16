@@ -1,0 +1,29 @@
+[project]
+name = "plotnine-themes"
+version = "0.1.0"
+description = "Extra themes, scales, and geoms for plotnine"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "plotnine>=0.13.6",
+]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+exclude = ["docs", ".venv", "tests/*"]
+
+ignore = [
+    "E402",    # module level import not at top of file
+    "E501",    # line too long (maximum 100 characters)
+    "F811",    # redefinition of unused name
+    "E203",    # whitespace before ':'
+    "F841",    # local variable 'name' is assigned to but never used
+    "E702",    # multiple statements on one line (semicolon)
+]
+
+[tool.coverage.report]
+exclude_also = [
+    "if TYPE_CHECKING:"
+]
